@@ -4,6 +4,7 @@ ARG netFxWebAppFolder=MyNetFxWebApp
 WORKDIR /app
 
 COPY . .
+RUN nuget restore MyNetFxApplication.sln
 RUN msbuild MyNetFxApplication.sln /p:Configuration=Release
 
 # Console app, runtime.
