@@ -1,0 +1,7 @@
+FROM phenixita/buildtools AS build
+WORKDIR /building
+
+COPY ./src/. .
+
+SHELL ["powershell", "-command"]
+RUN .\compiler.ps1 -myParam contenutoDelfile
