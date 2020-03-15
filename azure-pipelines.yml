@@ -26,3 +26,5 @@ stages:
         command: 'build'
         Dockerfile: 'Samples/MyNetFxApplication/Dockerfile'
         tags: '$(tag)'
+        arguments: '--no-cache'
+        addPipelineData: false
