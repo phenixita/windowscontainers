@@ -1,16 +1,18 @@
-FROM mcr.microsoft.com/dotnet/framework/sdk:4.8-windowsservercore-ltsc2019 AS build
-ARG netFxAppFolder=MyNetFxApplication
-ARG netFxWebAppFolder=MyNetFxWebApp
+FROM mcr.microsoft.com/dotnet/framework/sdk:4.8 AS build
 WORKDIR /app
 
-COPY . .
-RUN msbuild MyNetFxApplication.sln /p:Configuration=Release
+# copy csproj and restore as distinct layers
+COPY *.sln .
+COPY aspnetmvcapp/*.csproj ./aspnetmvcapp/
+COPY aspnetmvcapp/*.config ./aspnetmvcapp/
+RUN nuget restore
 
-# Console app, runtime.
+# copy everything else and build app
+COPY aspnetmvcapp/. ./aspnetmvcapp/
+WORKDIR /app/aspnetmvcapp
+RUN msbuild /p:Configuration=Release
+
+
 FROM mcr.microsoft.com/dotnet/framework/aspnet:4.8 AS runtime
-WORKDIR /console/$netFxAppFolder
-COPY --from=build /app/$netFxAppFolder/. ./
-
-# web app, runtime.
 WORKDIR /inetpub/wwwroot
-COPY --from=build /app/$netFxWebAppFolder/. ./
+COPY --from=build /app/aspnetmvcapp/. ./
