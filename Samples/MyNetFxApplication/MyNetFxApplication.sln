@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyNetFxApplication", "MyNetFxApplication\MyNetFxApplication.csproj", "{F7FD671D-5E84-4863-83F6-9B3E268F2983}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyNetFxWebApp", "MyNetFxWebApp\MyNetFxWebApp.csproj", "{1CACF595-AC97-4471-B7EC-517EEE2A181E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7FD671D-5E84-4863-83F6-9B3E268F2983}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7FD671D-5E84-4863-83F6-9B3E268F2983}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7FD671D-5E84-4863-83F6-9B3E268F2983}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7FD671D-5E84-4863-83F6-9B3E268F2983}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CACF595-AC97-4471-B7EC-517EEE2A181E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CACF595-AC97-4471-B7EC-517EEE2A181E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CACF595-AC97-4471-B7EC-517EEE2A181E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CACF595-AC97-4471-B7EC-517EEE2A181E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF5F76CD-6D5A-49C3-A038-DE906C39896C}
+	EndGlobalSection
+EndGlobal
