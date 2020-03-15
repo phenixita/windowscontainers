@@ -12,4 +12,4 @@ COPY --from=build /app/MyNetFxApplication/. ./
 
 # web app, runtime.
 WORKDIR /inetpub/wwwroot
-COPY --from=build /app/MyNetFxWebApp/. ./
+COPY --from=build /app/MyNetFxWebApp/. ./gi
