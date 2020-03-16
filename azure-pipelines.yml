@@ -1,8 +1,10 @@
 pool:
   vmImage: 'windows-latest'
 
+container:
+  image: mcr.microsoft.com/dotnet/framework/sdk:4.8-windowsservercore-ltsc2019
+  options: --hostname container-test --ip 192.168.0.1
+
 steps:
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- checkout: self
+- script: 'hello'
