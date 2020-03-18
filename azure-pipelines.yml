@@ -7,4 +7,4 @@ container:
 
 steps:
 - checkout: self
-- script: 'hello'
+- script: 'echo hello'
