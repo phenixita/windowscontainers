@@ -8,3 +8,5 @@ container:
 steps:
 - checkout: self
 - script: 'echo hello'
+
+# TO DO: build inside a custom container image with specific dependencies / environment config.
